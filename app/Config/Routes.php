@@ -34,6 +34,19 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// Rest Api manual Routes dikarenakan ingin menggunakan nama func custom
+$routes->post('auth', 'Auth::login');
+$routes->post('Auth', 'Auth::login');
+
+// Get menara
+$routes->get('menara/get_data', 'Menara::get_data');
+$routes->get('Menara/get_data', 'Menara::get_data');
+//  Sudah Pakai Restfull bawaan CI 4
+// $routes->resource('menara');
+// $routes->resource('validasi');
+// $routes->resource('produk');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
